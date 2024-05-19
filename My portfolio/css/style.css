@@ -1,0 +1,201 @@
+* {
+  margin:0 ;
+  /* border: 3px solid black;*/
+   
+  font-size: 10px;
+  overflow-x: none
+ 
+}
+h1,h2,h3,,label,a{
+  text-align: center;
+
+  font: 1em Arial,sans-serif;
+}
+/* 
+mobile */
+/* main, head, footer {
+  min-height: 100%;
+  border: 1px solid black;
+} */
+footer{
+  background-color: red;
+}
+body {
+  height: 100%; 
+  overflow:auto ;
+} /* working well */
+
+.parent-mobile-grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 10fr 1fr;
+}
+
+.mobile-grid {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.menu-btn-mobile {
+  display: block;
+  
+}
+#menu-btn{
+ background-color: royalblue;
+}
+
+#menu-btn:hover,.menu-link:hover{
+  background-color: green;
+  color: white;
+}
+
+#menu-bar {
+  display: none;
+}
+
+.menu-link-mobile {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid black;
+  border-bottom:none ;
+  background: gray;
+  padding: 8px 16px;
+}
+
+
+/* problem here */
+.mobile-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 100%; /* Ensure the container takes the full height of its parent */
+}
+
+#pp ,.pic-container {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+ 
+  height: 350px;
+  width: 350px;
+}
+
+.pic-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* Mobile ends here */
+
+.container img {
+  display: block;
+}
+
+.flicker-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+header {
+  background: #f6f6f6;;
+  min-height: 50px; /* Set a minimum height for the header */
+}
+
+main {
+  background: royalblue;
+}
+
+footer {
+  background: lemonchiffon;
+}
+
+.center-parent {
+  position: relative;
+}
+
+.child-center {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+label{
+  margin-right:px ;
+}
+a{
+  text-decoration: none;
+}
+.card{
+ 
+  box-shadow:0 4px 8px 0 rgba(0,0,0,5),0 6px 20px 0 rgba(0,0,0,19);
+  background-color: rgba(0,0,0,0.1);
+  display: block;
+  margin: 20px;
+  
+  
+}
+.icon-container{
+  height: 50px;
+  width: 35px;
+  border-radius: 50%;
+ 
+  margin: 10px 20px;
+
+  animation-name: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  0%{
+      transform: scale(100%);
+  }
+  20%{
+      transform: scale(110%);
+  }
+  40%{
+      transform: scale(120%);
+  }
+  60%{
+      transform: scale(110%);
+  }
+  100%{
+      transform: scale(100%);
+  }
+  
+}
+#animatable-container{
+  display: flex;
+  justify-content: center;
+  
+  margin: 10px;
+}
+input{
+  border-radius: 5px;
+  border: 1px solid;
+  background-color: aliceblue;
+}
